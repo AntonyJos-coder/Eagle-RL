@@ -1,0 +1,5 @@
+flask>=3.0,<4
+gymnasium[box2d]>=1.1,<2
+stable-baselines3>=2.6,<3
+opencv-python-headless>=4.8
+numpy>=1.24
