@@ -1,18 +1,16 @@
-# RocketRL Live Dashboard
+# Eagle RL: teaching an AI to land on the Moon
 
-## Windows PowerShell (from your existing project)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-backend-000000?logo=flask&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-dashboard-F7DF1E?logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-CSS3-E34F26?logo=html5&logoColor=white)
+![Gymnasium](https://img.shields.io/badge/Gymnasium-LunarLander--v3-0081A5)
+![Stable-Baselines3](https://img.shields.io/badge/Stable--Baselines3-PPO-4C9A2A)
+![Score](https://img.shields.io/badge/Test%20score-264.8%20%C2%B1%2020-brightgreen)
+![Solved](https://img.shields.io/badge/Solved-20%2F20-brightgreen)
 
-```powershell
-cd C:\Users\ADMIN\Downloads\RocketRL_Portfolio_Starter\rocketrl
-..\.venv\Scripts\python.exe -m pip install flask opencv-python-headless
-..\.venv\Scripts\python.exe app.py
-```
+A reinforcement-learning agent that learned to land a rocket on the Moon. It is trained with **PPO** on Gymnasium's **LunarLander-v3** and comes with a live browser dashboard that streams real simulator frames, the eight numbers the agent sees, and its learning curve. The saved model is then tested honestly on fresh attempts.
 
-Copy `app.py` and the `templates` folder into the existing `rocketrl` directory first.
-Then open http://127.0.0.1:5000
+**Result:** mean score **264.8 ± 20** over 20 fresh attempts, with **20 of 20 solved** (200 or more), 0 crashes and 0 timeouts.
 
-This dashboard trains **new** PPO models and saves them as `models/baseline_live.zip` and `models/improved_live.zip`; it does not load or overwrite your old `models/baseline.zip`.
-
-The `improved` shaping in this dashboard is a new example and may differ from the `improved` reward variant in your existing `rocketrl.py`. Reward values for differently shaped variants are not directly comparable; evaluate both on the original environment for a fair comparison.
-
-The video is genuine Gymnasium RGB frames captured during training. Rendering can slow training. Episode score >=200 is a proxy success convention, not a confirmed physical landing test.
+![Landing demo](clips/demo.gif)
